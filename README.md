@@ -107,26 +107,20 @@ Place screenshots in the `screenshots` folder:
 
 ## Critical Thinking Answers
 
-### 1. What happens when a user accesses `/profile` without logging in?
+i. What happens when a user accesses /profile without logging in?
+The application blocks the request and returns Unauthorized. This happens because the session does not contain a logged-in user.
 
-The application checks whether the session contains a `user` value. If there is no logged-in user, the route returns `Unauthorized` with HTTP status code `401`.
+ii. What data is returned after successful login?
+After successful login, the app returns the user’s GitHub profile data. This includes details like the GitHub username, user ID, display name, avatar URL, and profile link.
 
-### 2. What data is returned after successful login?
+iii. Why is OAuth considered more secure than traditional login?
+OAuth is more secure because the app does not collect or store the user’s password. Instead, GitHub handles authentication and only sends the app an authorization token.
 
-After successful login, the `/profile` route returns JSON containing a success message and selected GitHub profile data, including the user's GitHub ID, username, display name, avatar URL, and profile URL.
+iv. What challenges did you encounter?
+One challenge was setting up the correct callback URL for GitHub OAuth. Another challenge was understanding how the session is used to protect routes like /profile.
 
-### 3. Why is OAuth considered more secure than traditional login?
-
-OAuth is more secure because the application does not collect or store the user's GitHub password. Instead, GitHub authenticates the user and returns an access token that the application can use according to the granted permissions.
-
-### 4. What challenges did you encounter?
-
-Common challenges include configuring the correct callback URL, setting environment variables correctly, and understanding the difference between authentication, authorization, sessions, and access tokens.
-
-### 5. What did you learn from this activity?
-
-This activity demonstrates how OAuth 2.0 delegates login to a trusted provider, how Flask sessions can protect API routes, and how unauthorized users can be blocked from accessing protected data.
-
+v. What did you learn from this activity?
+I learned how OAuth 2.0 allows users to log in using a trusted provider like GitHub. I also learned how to protect API routes so only authenticated users can access them.
 ## Repository Submission Checklist
 
 - `app.py`

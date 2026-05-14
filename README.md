@@ -1,5 +1,7 @@
 # Securing APIs using OAuth 2.0 with GitHub and Auth0
 
+System Integration and Architecture
+
 This project is the laboratory activity for implementing OAuth 2.0 login with GitHub, protecting Flask API endpoints with sessions, and documenting Auth0 as an alternative identity provider.
 
 ## Objectives
